@@ -1,10 +1,10 @@
 const PARTIES = [
   { id: "spd", name: "SPD" },
-  { id: "gruene", name: "GRUENE" },
+  { id: "grüne", name: "GRÜNE" },
   { id: "linke", name: "DIE LINKE" },
   { id: "csu", name: "CSU" },
   { id: "fdp", name: "FDP" },
-  { id: "fwg", name: "FWG" }
+  { id: "fwg", name: "Freie Wähler" }
 ];
 
 const THESES = [
@@ -12,29 +12,29 @@ const THESES = [
     id: "stub",
     topic: "Thema 1: Stadt-Umland-Bahn (StUB)",
     context:
-      "Die Stadt-Umland-Bahn ist ein geplantes Strassenbahnnetz fuer die Region Erlangen. Nach einem Buergerentscheid 2024 ist der Bau beschlossen, jedoch wird die Finanzierung aufgrund der Haushaltskrise neu debattiert.",
+      "Die Stadt-Umland-Bahn ist ein geplantes Straßenbahnnetz für die Region Erlangen. Nach einem Bürgerentscheid 2024 ist der Bau beschlossen, jedoch wird die Finanzierung aufgrund der Haushaltskrise neu debattiert.",
     statement:
-      "Das Projekt Stadt-Umland-Bahn (StUB) soll wie geplant weitergefuehrt werden.",
+      "Das Projekt Stadt-Umland-Bahn (StUB) soll wie geplant weitergeführt werden.",
     positions: {
       spd: {
         stance: "ja",
         quote:
-          "Mit diesem Haushaltsbeschluss sichern wir die Zukunft. Zukunftsinvestitionen wie die StUB sind das Rueckgrat fuer ein modernes Erlangen."
+          "Mit diesem Haushaltsbeschluss sichern wir die Zukunft. Zukunftsinvestitionen wie die StUB sind das Rückgrat für ein modernes Erlangen."
       },
-      gruene: {
+      "grüne": {
         stance: "ja",
         quote:
-          "Es geht um richtig viel Geld fuer unsere Stadt. Der Haushaltsbeschluss sichert Zukunftsinvestitionen."
+          "Es geht um richtig viel Geld für unsere Stadt. Der Haushaltsbeschluss sichert Zukunftsinvestitionen."
       },
       linke: {
         stance: "ja",
         quote:
-          "Wo moeglich, sollten Autos durch Rad und oeffentlichen Verkehr ersetzt werden. Wir fordern den Ausbau von Radwegen, die Reaktivierung der Aurachtalbahn und die StUB."
+          "Wo möglich, sollten Autos durch Rad und öffentlichen Verkehr ersetzt werden. Wir fordern den Ausbau von Radwegen, die Reaktivierung der Aurachtalbahn und die StUB."
       },
       csu: {
         stance: "nein",
         quote:
-          "Angesichts der angespannten finanziellen Lage ist ein Moratorium fuer die Stadt-Umland-Bahn unerlaesslich. Vor weiteren Verpflichtungen braucht es eine ehrliche Neubewertung der Kosten."
+          "Angesichts der angespannten finanziellen Lage ist ein Moratorium für die Stadt-Umland-Bahn unerlässlich. Vor weiteren Verpflichtungen braucht es eine ehrliche Neubewertung der Kosten."
       },
       fdp: {
         stance: "nein",
@@ -44,7 +44,7 @@ const THESES = [
       fwg: {
         stance: "nein",
         quote:
-          "Haushalt 2026: Schoenrechnen statt Verantwortung. Ein Defizit von ueber 26 Millionen Euro verbietet solche Grossprojekte."
+          "Haushalt 2026: Schönrechnen statt Verantwortung. Ein Defizit von über 26 Millionen Euro verbietet solche Großprojekte."
       }
     }
   },
@@ -52,38 +52,38 @@ const THESES = [
     id: "gewerbesteuer",
     topic: "Thema 2: Gewerbesteuer",
     context:
-      "Erlangen leidet unter massiven Gewerbesteuereinbruechen. Die Stadtverwaltung sucht Wege, das Defizit im Haushalt auszugleichen.",
-    statement: "Die Gewerbesteuer soll erhoeht werden.",
+      "Erlangen leidet unter massiven Gewerbesteuereinbrüchen. Die Stadtverwaltung sucht Wege, das Defizit im Haushalt auszugleichen.",
+    statement: "Die Gewerbesteuer soll erhöht werden.",
     positions: {
       linke: {
         stance: "ja",
         quote:
-          "Als schnell umsetzbare Loesung fuer die finanziellen Schwierigkeiten schlagen wir eine Anhebung der Gewerbesteuer auf Muenchener Niveau vor."
+          "Als schnell umsetzbare Lösung für die finanziellen Schwierigkeiten schlagen wir eine Anhebung der Gewerbesteuer auf Münchener Niveau vor."
       },
       spd: {
         stance: "nein",
         quote:
-          "Wir wollen die Wirtschaft staerken, statt sie durch hoehere Steuern zu belasten. Der Fokus liegt auf der Schliessung von Steuerschlupfloechern."
+          "Wir wollen die Wirtschaft stärken, statt sie durch höhere Steuern zu belasten. Der Fokus liegt auf der Schließung von Steuerschlupflöchern."
       },
-      gruene: {
+      "grüne": {
         stance: "nein",
         quote:
-          "Gruene uebernehmen Verantwortung fuer Erlangen. Es geht darum, Erlangen handlungsfaehig zu halten, etwa durch Bedarfszuweisungen, nicht durch Steuererhoehungen."
+          "Grüne übernehmen Verantwortung für Erlangen. Es geht darum, Erlangen handlungsfähig zu halten, etwa durch Bedarfszuweisungen, nicht durch Steuererhöhungen."
       },
       csu: {
         stance: "nein",
         quote:
-          "Wir lehnen jegliche Steuererhoehungen ab und setzen uns fuer einen neuen Gewerbesteuersatz mit sukzessiver Senkung ein."
+          "Wir lehnen jegliche Steuererhöhungen ab und setzen uns für einen neuen Gewerbesteuersatz mit sukzessiver Senkung ein."
       },
       fdp: {
         stance: "nein",
         quote:
-          "Erlangen braucht Wege aus der Haushaltskrise durch Einsparungen, nicht durch Belastungen fuer die Wirtschaft."
+          "Erlangen braucht Wege aus der Haushaltskrise durch Einsparungen, nicht durch Belastungen für die Wirtschaft."
       },
       fwg: {
         stance: "nein",
         quote:
-          "Haushalt 2026: Schoenrechnen statt Verantwortung. Mehrbelastungen fuer Buerger und Betriebe lehnen wir ab."
+          "Haushalt 2026: Schönrechnen statt Verantwortung. Mehrbelastungen für Bürger und Betriebe lehnen wir ab."
       }
     }
   },
@@ -93,7 +93,7 @@ const THESES = [
     context:
       "Aufgrund der Wohnungsnot in Erlangen werden teilweise Mieten weit oberhalb des Mietspiegels verlangt.",
     statement:
-      "Die Stadt Erlangen soll eine offizielle Meldestelle einrichten, an die Buerger illegal hohe Mieten melden koennen.",
+      "Die Stadt Erlangen soll eine offizielle Meldestelle einrichten, an die Bürger illegal hohe Mieten melden können.",
     positions: {
       linke: {
         stance: "ja",
@@ -103,106 +103,106 @@ const THESES = [
       spd: {
         stance: "nein",
         quote:
-          "Sozialdemokratische Politik orientiert sich an den Beduerfnissen. Fokus liegt auf Neubau durch die GEWOBAU, nicht auf staatlicher Kontrolle."
+          "Sozialdemokratische Politik orientiert sich an den Bedürfnissen. Fokus liegt auf Neubau durch die GEWOBAU, nicht auf staatlicher Kontrolle."
       },
-      gruene: {
+      "grüne": {
         stance: "nein",
         quote:
-          "Nachverdichtung nur mit Qualitaet. Keine Forderung nach einer zusaetzlichen Kontrollbehoerde im Programm."
+          "Nachverdichtung nur mit Qualität. Keine Forderung nach einer zusätzlichen Kontrollbehörde im Programm."
       },
       csu: {
         stance: "nein",
         quote:
-          "Baustandards muessen auf Sinnhaftigkeit und Kosten geprueft werden. Deregulierung und Entbuerokratisierung statt neuer Aemter."
+          "Baustandards müssen auf Sinnhaftigkeit und Kosten geprüft werden. Deregulierung und Entbürokratisierung statt neuer Ämter."
       },
       fdp: {
         stance: "nein",
         quote:
-          "Erlangen braucht mehr Freiheit fuer den Wohnungsbau. Marktwirtschaftliche Loesungen statt Meldestellen."
+          "Erlangen braucht mehr Freiheit für den Wohnungsbau. Marktwirtschaftliche Lösungen statt Meldestellen."
       },
       fwg: {
         stance: "nein",
         quote:
-          "Wir brauchen bezahlbaren Wohnraum durch Bauen, nicht durch neue Buerokratie."
+          "Wir brauchen bezahlbaren Wohnraum durch Bauen, nicht durch neue Bürokratie."
       }
     }
   },
   {
-    id: "broetchentaste",
-    topic: "Thema 4: Parken in der Innenstadt (Broetchentaste)",
+    id: "brötchentaste",
+    topic: "Thema 4: Parken in der Innenstadt (Brötchentaste)",
     context:
-      "Die Broetchentaste ermoeglicht kostenloses Parken fuer einen kurzen Zeitraum (z. B. 15-30 Minuten), um den schnellen Einkauf im Einzelhandel zu foerdern.",
+      "Die Brötchentaste ermöglicht kostenloses Parken für einen kurzen Zeitraum (z. B. 15-30 Minuten), um den schnellen Einkauf im Einzelhandel zu fördern.",
     statement:
-      "In der Erlanger Innenstadt soll kostenloses Kurzzeitparken (Broetchentaste) eingefuehrt werden.",
+      "In der Erlanger Innenstadt soll kostenloses Kurzzeitparken (Brötchentaste) eingeführt werden.",
     positions: {
       csu: {
         stance: "ja",
-        quote: "Kostenloses Kurzzeitparken (Broetchentaste) einfuehren."
+        quote: "Kostenloses Kurzzeitparken (Brötchentaste) einführen."
       },
       fdp: {
         stance: "ja",
         quote:
-          "Wir muessen die Innenstadt fuer alle Verkehrsmittel erreichbar halten. Dazu gehoert die Erleichterung des Parkens fuer Kundinnen und Kunden."
+          "Wir müssen die Innenstadt für alle Verkehrsmittel erreichbar halten. Dazu gehört die Erleichterung des Parkens für Kundinnen und Kunden."
       },
       fwg: {
         stance: "ja",
         quote:
-          "Staerkung des Einzelhandels durch Erreichbarkeit. Parken darf kein Luxusgut sein."
+          "Stärkung des Einzelhandels durch Erreichbarkeit. Parken darf kein Luxusgut sein."
       },
       spd: {
         stance: "nein",
         quote:
-          "Erlangen soll eine Stadt fuer Menschen sein, nicht fuer Autos. Prioritaet hat der Ausbau von Fuss- und Radwegen."
+          "Erlangen soll eine Stadt für Menschen sein, nicht für Autos. Priorität hat der Ausbau von Fuß- und Radwegen."
       },
-      gruene: {
+      "grüne": {
         stance: "nein",
         quote:
-          "Autos durch Rad und oeffentlichen Verkehr ersetzen. Wo moeglich, sollten Parkflaechen entsiegelt werden."
+          "Autos durch Rad und öffentlichen Verkehr ersetzen. Wo möglich, sollten Parkflächen entsiegelt werden."
       },
       linke: {
         stance: "nein",
         quote:
-          "Wir fordern eine Fussgaengerzone bis zum Martin-Luther-Platz. Kostenloses Parken widerspricht der autofreien Stadt."
+          "Wir fordern eine Fußgängerzone bis zum Martin-Luther-Platz. Kostenloses Parken widerspricht der autofreien Stadt."
       }
     }
   },
   {
-    id: "kuerzung-freiwillige-leistungen",
-    topic: "Thema 5: Kuerzung freiwilliger Leistungen",
+    id: "kürzung-freiwillige-leistungen",
+    topic: "Thema 5: Kürzung freiwilliger Leistungen",
     context:
-      "Freiwillige Leistungen sind Zuschuesse an Vereine, Kultur- und Sozialeinrichtungen, zu denen die Stadt gesetzlich nicht verpflichtet ist.",
+      "Freiwillige Leistungen sind Zuschüsse an Vereine, Kultur- und Sozialeinrichtungen, zu denen die Stadt gesetzlich nicht verpflichtet ist.",
     statement:
-      "Angesichts der Haushaltskrise muessen die staedtischen Zuschuesse fuer Kultur, Sport und soziale Vereine gekuerzt werden.",
+      "Angesichts der Haushaltskrise müssen die städtischen Zuschüsse für Kultur, Sport und soziale Vereine gekürzt werden.",
     positions: {
       fwg: {
         stance: "ja",
         quote:
-          "Haushalt 2026: Schoenrechnen statt Verantwortung. Konsolidierung muss bei allen nicht zwingend notwendigen Ausgaben ansetzen."
+          "Haushalt 2026: Schönrechnen statt Verantwortung. Konsolidierung muss bei allen nicht zwingend notwendigen Ausgaben ansetzen."
       },
       fdp: {
         stance: "ja",
         quote:
-          "Erlangen muss wieder lernen, mit dem Geld auszukommen, das es hat. Priorisierung der Pflichtaufgaben ist unumgaenglich."
+          "Erlangen muss wieder lernen, mit dem Geld auszukommen, das es hat. Priorisierung der Pflichtaufgaben ist unumgänglich."
       },
       csu: {
         stance: "nein",
         quote:
-          "Kultur ist mehr als nur freiwillige Leistung. Es muessen alle Anstrengungen unternommen werden, bestehende Strukturen zu erhalten."
+          "Kultur ist mehr als nur freiwillige Leistung. Es müssen alle Anstrengungen unternommen werden, bestehende Strukturen zu erhalten."
       },
       spd: {
         stance: "nein",
         quote:
-          "Haushalt 2026 ist beschlossen - Poetinnenfest 2026 gerettet. Wir lassen unsere Vereine nicht im Stich."
+          "Haushalt 2026 ist beschlossen - Poet*innenfest 2026 gerettet. Wir lassen unsere Vereine nicht im Stich."
       },
-      gruene: {
+      "grüne": {
         stance: "nein",
         quote:
-          "Fuer Vereine und soziale Einrichtungen geht es nicht um Luxus, sondern um das taegliche Ueberleben. Das darf die Stadt nicht zulassen."
+          "Für Vereine und soziale Einrichtungen geht es nicht um Luxus, sondern um das tägliche Überleben. Das darf die Stadt nicht zulassen."
       },
       linke: {
         stance: "nein",
         quote:
-          "Die Haushaltskrise droht vor allem im Kulturbereich zu einem Kahlschlag zu fuehren. Fuer den Erhalt von Stadtteilzentren muss die Stadt genug Geld in die Hand nehmen."
+          "Die Haushaltskrise droht vor allem im Kulturbereich zu einem Kahlschlag zu führen. Für den Erhalt von Stadtteilzentren muss die Stadt genug Geld in die Hand nehmen."
       }
     }
   }
@@ -342,7 +342,7 @@ function labelForAnswer(answer) {
   if (answer === "ja") return "Ja";
   if (answer === "nein") return "Nein";
   if (answer === "neutral") return "Neutral";
-  return "Uebersprungen";
+  return "Übersprungen";
 }
 
 function labelForPartyStance(stance) {
@@ -354,11 +354,11 @@ function showResults() {
   els.results.classList.remove("hidden");
 
   const ranking = computeScores();
-  const anyAnswered = state.answers.some((a) => a && a !== "skip");
+  const anyAnswered = state.answers.some((answer) => answer && answer !== "skip");
 
   if (!anyAnswered) {
     els.ranking.innerHTML =
-      "<p>Du hast keine These beantwortet. Starte neu und waehle mindestens eine These.</p>";
+      "<p>Du hast keine These beantwortet. Starte neu und wähle mindestens eine These.</p>";
   } else {
     els.ranking.innerHTML = ranking
       .map(
@@ -381,23 +381,32 @@ function showResults() {
     const userAnswer = labelForAnswer(state.answers[idx]);
     const weighted = state.weights[idx] === 2 ? "Ja" : "Nein";
 
-    const partyLines = PARTIES.map((party) => {
+    const quoteCards = PARTIES.map((party) => {
       const entry = thesis.positions[party.id];
       if (!entry) return "";
       return `
-        <div class="party-line">
-          <strong>${party.name}:</strong> ${labelForPartyStance(entry.stance)}
-          <span class="party-quote">- "${entry.quote}"</span>
-        </div>
+        <article class="quote-card">
+          <header class="quote-head">
+            <strong class="quote-party">${party.name}</strong>
+            <span class="stance-badge stance-${entry.stance}">${labelForPartyStance(entry.stance)}</span>
+          </header>
+          <blockquote class="quote-text">„${entry.quote}“</blockquote>
+        </article>
       `;
     }).join("");
 
     return `
-      <div class="detail-card">
-        <p class="detail-title"><strong>${thesis.topic}</strong></p>
-        <p class="party-line"><span class="pill">Deine Antwort: ${userAnswer}</span> <span class="pill">Doppelt gewichtet: ${weighted}</span></p>
-        <div class="party-lines">${partyLines}</div>
-      </div>
+      <details class="detail-accordion" ${idx === 0 ? "open" : ""}>
+        <summary class="detail-summary">
+          <span class="detail-summary-topic">${thesis.topic}</span>
+          <span class="detail-pills">
+            <span class="pill">Deine Antwort: ${userAnswer}</span>
+            <span class="pill">Doppelt gewichtet: ${weighted}</span>
+          </span>
+        </summary>
+        <p class="detail-statement">${thesis.statement}</p>
+        <div class="quote-grid">${quoteCards}</div>
+      </details>
     `;
   }).join("");
 }
