@@ -10,11 +10,11 @@ const PARTIES = [
 const THESES = [
   {
     id: "stub",
-    topic: "Thema 1: Stadt-Umland-Bahn (StUB)",
+    topic: "StUB",
     context:
       "Die Stadt-Umland-Bahn ist ein geplantes Straßenbahnnetz für die Region Erlangen. Nach einem Bürgerentscheid 2024 ist der Bau beschlossen, jedoch wird die Finanzierung aufgrund der Haushaltskrise neu debattiert.",
     statement:
-      "Das Projekt Stadt-Umland-Bahn (StUB) soll wie geplant weitergeführt werden.",
+      "Das Projekt Stadt-Umland-Bahn (StUB) soll wie geplant weitergeführt werden",
     positions: {
       spd: {
         stance: "ja",
@@ -50,10 +50,10 @@ const THESES = [
   },
   {
     id: "gewerbesteuer",
-    topic: "Thema 2: Gewerbesteuer",
+    topic: "Gewerbesteuer",
     context:
       "Erlangen leidet unter massiven Gewerbesteuereinbrüchen. Die Stadtverwaltung sucht Wege, das Defizit im Haushalt auszugleichen.",
-    statement: "Die Gewerbesteuer soll erhöht werden.",
+    statement: "Die Gewerbesteuer soll erhöht werden",
     positions: {
       linke: {
         stance: "ja",
@@ -89,11 +89,11 @@ const THESES = [
   },
   {
     id: "meldestelle-mietwucher",
-    topic: "Thema 3: Meldestelle gegen Mietwucher",
+    topic: "Meldestelle",
     context:
       "Aufgrund der Wohnungsnot in Erlangen werden teilweise Mieten weit oberhalb des Mietspiegels verlangt.",
     statement:
-      "Die Stadt Erlangen soll eine offizielle Meldestelle einrichten, an die Bürger illegal hohe Mieten melden können.",
+      "Die Stadt Erlangen soll eine offizielle Meldestelle einrichten, an die Bürger illegal hohe Mieten melden können",
     positions: {
       linke: {
         stance: "ja",
@@ -129,11 +129,11 @@ const THESES = [
   },
   {
     id: "brötchentaste",
-    topic: "Thema 4: Parken in der Innenstadt (Brötchentaste)",
+    topic: "Brötchentaste",
     context:
       "Die Brötchentaste ermöglicht kostenloses Parken für einen kurzen Zeitraum (z. B. 15-30 Minuten), um den schnellen Einkauf im Einzelhandel zu fördern.",
     statement:
-      "In der Erlanger Innenstadt soll kostenloses Kurzzeitparken (Brötchentaste) eingeführt werden.",
+      "In der Erlanger Innenstadt soll kostenloses Kurzzeitparken eingeführt werden",
     positions: {
       csu: {
         stance: "ja",
@@ -168,11 +168,11 @@ const THESES = [
   },
   {
     id: "kürzung-freiwillige-leistungen",
-    topic: "Thema 5: Kürzung freiwilliger Leistungen",
+    topic: "Freiwillige Zuschüsse",
     context:
       "Freiwillige Leistungen sind Zuschüsse an Vereine, Kultur- und Sozialeinrichtungen, zu denen die Stadt gesetzlich nicht verpflichtet ist.",
     statement:
-      "Angesichts der Haushaltskrise müssen die städtischen Zuschüsse für Kultur, Sport und soziale Vereine gekürzt werden.",
+      "Angesichts der Haushaltskrise müssen die städtischen Zuschüsse für Kultur, Sport und soziale Vereine gekürzt werden",
     positions: {
       fwg: {
         stance: "ja",
