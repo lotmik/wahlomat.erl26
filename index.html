@@ -27,14 +27,46 @@
         </p>
       </header>
 
-      <section id="intro" class="card fade-in">
-        <p>
-          Das Tool orientiert sich am Ablauf des bpb-Wahl-O-Mat: Du beantwortest
-          nacheinander Thesen mit <strong>Ja</strong>, <strong>Neutral</strong>
-          oder <strong>Nein</strong>. Danach siehst du die Übereinstimmung mit
-          den Positionen der Parteien in Erlangen.
-        </p>
-        <button id="startBtn" class="btn btn-primary">Jetzt starten</button>
+      <section id="intro" class="card intro-card fade-in">
+        <div class="intro-grid">
+          <div class="intro-copy">
+            <h2>Dein lokaler Wahl-Check für Erlangen</h2>
+            <p>
+              Du beantwortest 5 kommunale Thesen mit <strong>Ja</strong>,
+              <strong>Neutral</strong> oder <strong>Nein</strong>. Danach siehst
+              du, welche Partei am besten zu deinen Positionen passt.
+            </p>
+            <ul class="intro-list">
+              <li>Direkter Vergleich mit Parteipositionen und Zitaten</li>
+              <li>Optional doppelte Gewichtung einzelner Thesen</li>
+              <li>Klarer Ergebnis-Überblick mit Detailaufschlüsselung</li>
+            </ul>
+          </div>
+          <aside class="intro-facts">
+            <p class="intro-facts-title">Schnellüberblick</p>
+            <div class="fact-grid">
+              <div class="fact-box">
+                <strong>5</strong>
+                <span>Themen</span>
+              </div>
+              <div class="fact-box">
+                <strong>6</strong>
+                <span>Parteien</span>
+              </div>
+              <div class="fact-box">
+                <strong>~3 Min</strong>
+                <span>Dauer</span>
+              </div>
+            </div>
+            <p class="intro-note">
+              Hinweis: Das Ergebnis ist ein politischer Positionsvergleich und
+              keine Wahlempfehlung.
+            </p>
+          </aside>
+        </div>
+        <div class="intro-actions">
+          <button id="startBtn" class="btn btn-primary">Jetzt starten</button>
+        </div>
       </section>
 
       <section id="quiz" class="hidden">
@@ -73,13 +105,33 @@
       </section>
 
       <section id="results" class="hidden">
-        <article class="card fade-in">
+        <article class="card result-hero fade-in">
           <h2>Dein Ergebnis</h2>
           <p class="result-subtitle">
             Die Prozentwerte zeigen die inhaltliche Nähe zu deinen Antworten.
           </p>
+
+          <div id="winnerCard" class="winner-card">
+            <p class="winner-label">Höchste Übereinstimmung</p>
+            <p id="winnerParty" class="winner-party">-</p>
+            <p id="winnerMeta" class="winner-meta">Noch keine Auswertung.</p>
+          </div>
+
+          <div class="result-stats">
+            <div class="result-stat">
+              <span class="stat-key">Beantwortete Thesen</span>
+              <strong id="answeredCount">0/5</strong>
+            </div>
+            <div class="result-stat">
+              <span class="stat-key">Doppelt gewichtet</span>
+              <strong id="weightedCount">0</strong>
+            </div>
+          </div>
+
           <div id="ranking" class="ranking"></div>
-          <button id="restartBtn" class="btn btn-ghost">Neu starten</button>
+          <div class="result-actions">
+            <button id="restartBtn" class="btn btn-ghost">Neu starten</button>
+          </div>
         </article>
 
         <article class="card fade-in">
