@@ -4,7 +4,7 @@ const PARTIES = [
   { id: "linke", name: "DIE LINKE" },
   { id: "csu", name: "CSU" },
   { id: "fdp", name: "FDP" },
-  { id: "fwg", name: "Freie Wähler" }
+  { id: "freie-wähler", name: "Freie Wähler" }
 ];
 
 const THESES = [
@@ -41,7 +41,7 @@ const THESES = [
         quote:
           "Erlangen, das Klima und die StUB: Wege in die Haushaltskrise. Die StUB ist Teil dieser Krise."
       },
-      fwg: {
+      "freie-wähler": {
         stance: "nein",
         quote:
           "Haushalt 2026: Schönrechnen statt Verantwortung. Ein Defizit von über 26 Millionen Euro verbietet solche Großprojekte."
@@ -80,7 +80,7 @@ const THESES = [
         quote:
           "Erlangen braucht Wege aus der Haushaltskrise durch Einsparungen, nicht durch Belastungen für die Wirtschaft."
       },
-      fwg: {
+      "freie-wähler": {
         stance: "nein",
         quote:
           "Haushalt 2026: Schönrechnen statt Verantwortung. Mehrbelastungen für Bürger und Betriebe lehnen wir ab."
@@ -120,7 +120,7 @@ const THESES = [
         quote:
           "Erlangen braucht mehr Freiheit für den Wohnungsbau. Marktwirtschaftliche Lösungen statt Meldestellen."
       },
-      fwg: {
+      "freie-wähler": {
         stance: "nein",
         quote:
           "Wir brauchen bezahlbaren Wohnraum durch Bauen, nicht durch neue Bürokratie."
@@ -144,7 +144,7 @@ const THESES = [
         quote:
           "Wir müssen die Innenstadt für alle Verkehrsmittel erreichbar halten. Dazu gehört die Erleichterung des Parkens für Kundinnen und Kunden."
       },
-      fwg: {
+      "freie-wähler": {
         stance: "ja",
         quote:
           "Stärkung des Einzelhandels durch Erreichbarkeit. Parken darf kein Luxusgut sein."
@@ -174,7 +174,7 @@ const THESES = [
     statement:
       "Angesichts der Haushaltskrise müssen die städtischen Zuschüsse für Kultur, Sport und soziale Vereine gekürzt werden",
     positions: {
-      fwg: {
+      "freie-wähler": {
         stance: "ja",
         quote:
           "Haushalt 2026: Schönrechnen statt Verantwortung. Konsolidierung muss bei allen nicht zwingend notwendigen Ausgaben ansetzen."
@@ -231,6 +231,11 @@ const els = {
   weightToggle: document.getElementById("weightToggle"),
   ranking: document.getElementById("ranking"),
   details: document.getElementById("details"),
+  winnerCard: document.getElementById("winnerCard"),
+  winnerParty: document.getElementById("winnerParty"),
+  winnerMeta: document.getElementById("winnerMeta"),
+  answeredCount: document.getElementById("answeredCount"),
+  weightedCount: document.getElementById("weightedCount"),
   answerButtons: [...document.querySelectorAll(".answer-btn")]
 };
 
@@ -354,12 +359,36 @@ function showResults() {
   els.results.classList.remove("hidden");
 
   const ranking = computeScores();
+  const answeredCount = state.answers.filter(
+    (answer) => answer && answer !== "skip"
+  ).length;
+  const weightedCount = state.weights.filter(
+    (weight, idx) => weight === 2 && state.answers[idx] && state.answers[idx] !== "skip"
+  ).length;
   const anyAnswered = state.answers.some((answer) => answer && answer !== "skip");
 
+  els.answeredCount.textContent = `${answeredCount}/${THESES.length}`;
+  els.weightedCount.textContent = `${weightedCount}`;
+
   if (!anyAnswered) {
+    els.winnerParty.textContent = "-";
+    els.winnerMeta.textContent =
+      "Beantworte mindestens eine These, um eine Auswertung zu erhalten.";
     els.ranking.innerHTML =
       "<p>Du hast keine These beantwortet. Starte neu und wähle mindestens eine These.</p>";
   } else {
+    const top = ranking[0];
+    const second = ranking[1];
+    els.winnerParty.textContent = `${top.party} (${top.percent}%)`;
+    if (second) {
+      els.winnerMeta.textContent = `Vorsprung vor Platz 2: ${Math.max(
+        0,
+        top.percent - second.percent
+      )} Prozentpunkte`;
+    } else {
+      els.winnerMeta.textContent = "Nur eine Partei in der Auswertung verfügbar.";
+    }
+
     els.ranking.innerHTML = ranking
       .map(
         (item) => `
