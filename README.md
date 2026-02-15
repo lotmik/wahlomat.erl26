@@ -8,14 +8,10 @@ Einfach `index.html` im Browser oeffnen.
 
 ## Als GitHub Pages hosten
 
-1. Repository nach GitHub pushen (z. B. Branch `main`).
-2. In GitHub: `Settings` -> `Pages`.
-3. Bei `Build and deployment` einstellen:
-   - `Source`: `Deploy from a branch`
-   - `Branch`: `main`
-   - `Folder`: `/ (root)`
-4. Speichern und 1-2 Minuten warten.
-5. Die Seite ist dann unter `https://<dein-user>.github.io/<repo-name>/` erreichbar.
+1. Repository nach GitHub pushen (Branch `main`).
+2. Workflow `.github/workflows/pages.yml` deployed automatisch auf Branch `gh-pages`.
+3. In GitHub bei Bedarf einmal pruefen: `Settings` -> `Pages` -> Source `Deploy from a branch`, Branch `gh-pages`, Folder `/ (root)`.
+4. Die Seite ist dann unter `https://<dein-user>.github.io/<repo-name>/` erreichbar.
 
 ## Dateien
 
