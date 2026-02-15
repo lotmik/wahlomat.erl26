@@ -20,6 +20,8 @@ body {
   margin: 0;
   padding: 0;
   font-family: "Inter", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
   color: var(--text);
   background: var(--bg);
 }
@@ -50,7 +52,7 @@ body {
 }
 
 .kicker {
-  font-size: 0.8rem;
+  font-size: 0.78rem;
   color: var(--muted);
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -65,6 +67,8 @@ h1 {
 
 .subtitle {
   margin: 12px 0 0;
+  font-size: clamp(1rem, 1.5vw, 1.08rem);
+  line-height: 1.55;
   color: var(--muted);
   max-width: 65ch;
 }
@@ -89,7 +93,7 @@ h1 {
 }
 
 .progress-text {
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   color: var(--muted);
 }
 
@@ -122,7 +126,7 @@ h1 {
   border: 1px solid #e3e5e8;
   border-radius: 999px;
   padding: 6px 12px;
-  font-size: 0.84rem;
+  font-size: 0.86rem;
   font-weight: 500;
 }
 
@@ -130,7 +134,7 @@ h1 {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  font-size: 0.88rem;
+  font-size: 0.92rem;
   color: var(--muted);
 }
 
@@ -139,19 +143,22 @@ h1 {
 }
 
 h2 {
-  font-size: clamp(1.3rem, 2.2vw, 1.7rem);
+  font-size: clamp(1.42rem, 2.4vw, 1.85rem);
+  line-height: 1.3;
   margin: 0 0 10px;
 }
 
 h3 {
   margin: 0 0 14px;
-  font-size: 1.15rem;
+  font-size: clamp(1.2rem, 2vw, 1.4rem);
+  line-height: 1.35;
 }
 
 .context {
   margin: 0 0 22px;
+  font-size: 1.02rem;
   color: var(--muted);
-  line-height: 1.55;
+  line-height: 1.65;
 }
 
 .answers {
@@ -166,7 +173,7 @@ h3 {
   color: var(--text);
   border-radius: 10px;
   padding: 10px 14px;
-  font-size: 0.95rem;
+  font-size: 0.98rem;
   font-weight: 500;
   cursor: pointer;
   transition:
@@ -211,7 +218,9 @@ h3 {
 
 .result-subtitle {
   margin-top: 6px;
+  font-size: 1rem;
   color: var(--muted);
+  line-height: 1.55;
 }
 
 .ranking {
@@ -223,7 +232,7 @@ h3 {
 .rank-item {
   border: 1px solid var(--border);
   border-radius: 12px;
-  padding: 12px;
+  padding: 14px;
   background: #fff;
 }
 
@@ -236,10 +245,12 @@ h3 {
 }
 
 .rank-party {
+  font-size: 1.02rem;
   font-weight: 600;
 }
 
 .rank-score {
+  font-size: 1.04rem;
   color: var(--good);
   font-weight: 600;
 }
@@ -262,41 +273,111 @@ h3 {
   gap: 12px;
 }
 
-.detail-card {
+.detail-accordion {
   border: 1px solid var(--border);
   border-radius: 12px;
-  padding: 14px;
   background: #fff;
+  overflow: clip;
 }
 
-.detail-title {
-  margin: 0 0 10px;
-  font-size: 0.98rem;
+.detail-accordion[open] {
+  box-shadow: 0 6px 16px rgba(15, 23, 42, 0.06);
+}
+
+.detail-summary {
+  cursor: pointer;
+  list-style: none;
+  display: grid;
+  gap: 10px;
+  padding: 14px 16px;
+}
+
+.detail-summary::-webkit-details-marker {
+  display: none;
+}
+
+.detail-summary-topic {
+  font-size: 1.02rem;
+  font-weight: 600;
+}
+
+.detail-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.detail-statement {
+  margin: 2px 16px 14px;
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.5;
 }
 
 .pill {
   display: inline-block;
-  padding: 3px 8px;
+  padding: 4px 9px;
   border-radius: 999px;
-  font-size: 0.78rem;
+  font-size: 0.8rem;
   border: 1px solid #d9dce1;
   color: #42474f;
   background: #f8f9fb;
 }
 
-.party-lines {
+.quote-grid {
   display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  padding: 0 16px 16px;
+}
+
+.quote-card {
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  background: #fcfcfc;
+  padding: 10px 11px;
+}
+
+.quote-head {
+  display: flex;
+  justify-content: space-between;
   gap: 8px;
+  align-items: center;
+  margin-bottom: 8px;
 }
 
-.party-line {
+.quote-party {
   font-size: 0.9rem;
-  color: #2f3338;
-  line-height: 1.4;
+  line-height: 1.3;
 }
 
-.party-quote {
-  color: var(--muted);
+.stance-badge {
+  font-size: 0.74rem;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 999px;
+  border: 1px solid transparent;
+}
+
+.stance-ja {
+  color: #0f5132;
+  background: #e7f7ed;
+  border-color: #bbe8cb;
+}
+
+.stance-nein {
+  color: #7f1d1d;
+  background: #fceeee;
+  border-color: #f5caca;
+}
+
+.quote-text {
+  margin: 0;
+  padding: 0;
+  color: #434b56;
+  font-size: 0.9rem;
+  line-height: 1.55;
+  font-style: italic;
 }
 
 .fade-in {
@@ -353,5 +434,13 @@ h3 {
 
   .nav-row .btn {
     width: 100%;
+  }
+
+  .detail-summary-topic {
+    font-size: 0.96rem;
+  }
+
+  .quote-grid {
+    grid-template-columns: 1fr;
   }
 }
