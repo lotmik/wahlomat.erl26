@@ -4,45 +4,73 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Wahl-O-Mat Erlangen 2026</title>
-    <meta
-      name="description"
-      content="Wahl-O-Mat Erlangen 2026"
-    />
+    <meta name="description" content="Wahl-O-Mat Erlangen 2026" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
     <div class="page-bg" aria-hidden="true"></div>
+
     <main class="container">
       <header class="hero fade-in">
         <p class="kicker">Kommunalwahl 2026</p>
-        <h1>Wahl-O-Mat 2026</h1>
+        <h1>Wahl-O-Mat Erlangen</h1>
+        <p class="subtitle">
+          Finde in wenigen Minuten heraus, welche politischen Positionen zu deinen
+          Antworten passen.
+        </p>
       </header>
 
       <section id="intro" class="card intro-card fade-in">
         <div class="intro-grid">
           <div class="intro-copy">
-            <h2>Deine Hilfe zu den Kommunalwahlen in Erlangen</h2>
-            <p>Bist du dir nicht sicher, für wen due am 8. März deine Stimme abgibst? Mit diesem kurzen Test bekommst du eine kleine Hilfestellung.</p>
+            <h2>Deine Orientierung zur Kommunalwahl in Erlangen</h2>
             <p>
               Du beantwortest 5 kommunale Thesen mit <strong>Ja</strong>,
-              <strong>Neutral</strong> oder <strong>Nein</strong>. Danach siehst
-              du, welche Partei am besten zu deinen Positionen passt.
+              <strong>Neutral</strong> oder <strong>Nein</strong> und kannst
+              einzelne Themen doppelt gewichten.
             </p>
+            <p>
+              Am Ende erhältst du eine klare, visuelle Auswertung mit Ranking und
+              Originalzitaten der Parteien.
+            </p>
+            <div class="intro-chips">
+              <span class="intro-chip">Dauer: 2-3 Minuten</span>
+              <span class="intro-chip">5 Thesen</span>
+              <span class="intro-chip">Direkter Positionsvergleich</span>
+            </div>
           </div>
+
+          <aside class="intro-facts" aria-label="Überblick">
+            <h3 class="intro-facts-title">Auf Einen Blick</h3>
+            <div class="fact-grid">
+              <div class="fact-box">
+                <strong>8. März</strong>
+                <span>Wahltag 2026</span>
+              </div>
+              <div class="fact-box">
+                <strong>6</strong>
+                <span>Parteien</span>
+              </div>
+              <div class="fact-box">
+                <strong>1 Ziel</strong>
+                <span>Mehr Klarheit</span>
+              </div>
+            </div>
             <p class="intro-note">
               Hinweis: Das Ergebnis ist ein politischer Positionsvergleich und
               keine Wahlempfehlung.
             </p>
           </aside>
         </div>
+
         <div class="intro-actions">
-          <button id="startBtn" class="btn btn-primary">Starten</button>
+          <button id="startBtn" class="btn btn-primary">Jetzt starten</button>
         </div>
       </section>
 
@@ -62,6 +90,7 @@
               Diese doppelt gewichten
             </label>
           </div>
+
           <h2 id="statement"></h2>
           <p id="context" class="context"></p>
 
@@ -84,6 +113,27 @@
       <section id="results" class="hidden">
         <article class="card result-hero fade-in">
           <h2>Dein Ergebnis</h2>
+          <p class="result-subtitle">
+            Diese Auswertung zeigt deine inhaltliche Nähe zu den Positionen der
+            Parteien bei den ausgewählten Thesen.
+          </p>
+
+          <div class="winner-card" id="winnerCard">
+            <p class="winner-label">Beste Übereinstimmung</p>
+            <p id="winnerParty" class="winner-party">-</p>
+            <p id="winnerMeta" class="winner-meta"></p>
+          </div>
+
+          <div class="result-stats">
+            <div class="result-stat">
+              <span class="stat-key">Beantwortete Thesen</span>
+              <strong id="answeredCount">0/5</strong>
+            </div>
+            <div class="result-stat">
+              <span class="stat-key">Doppelt gewichtet</span>
+              <strong id="weightedCount">0</strong>
+            </div>
+          </div>
 
           <div id="ranking" class="ranking"></div>
           <div class="result-actions">
