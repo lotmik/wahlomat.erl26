@@ -1,18 +1,18 @@
 :root {
-  --bg: #efe9dc;
-  --bg-deep: #e4dccb;
-  --paper: #fbf8f1;
-  --card: #fffdf8;
-  --ink: #1f2a2c;
-  --ink-soft: #4f5d60;
-  --line: #d9d1c1;
-  --accent: #1f4a52;
-  --accent-soft: #2f6872;
-  --accent-contrast: #f3f0e8;
-  --good: #2d6a4f;
-  --warn: #8a3a2e;
-  --shadow-sm: 0 8px 24px rgba(26, 31, 28, 0.08);
-  --shadow-md: 0 18px 44px rgba(22, 27, 25, 0.14);
+  --bg: #f2f2f2;
+  --bg-deep: #e8e8e8;
+  --paper: #f8f8f8;
+  --card: #ffffff;
+  --ink: #141414;
+  --ink-soft: #4c4c4c;
+  --line: #d6d6d6;
+  --accent: #1f1f1f;
+  --accent-soft: #3a3a3a;
+  --accent-contrast: #ffffff;
+  --good: #1f1f1f;
+  --warn: #4c4c4c;
+  --shadow-sm: 0 6px 16px rgba(0, 0, 0, 0.06);
+  --shadow-md: 0 10px 24px rgba(0, 0, 0, 0.08);
 }
 
 * {
@@ -27,7 +27,7 @@ body {
 
 body {
   min-height: 100vh;
-  font-family: "Manrope", "Segoe UI", sans-serif;
+  font-family: "Inter", "Segoe UI", sans-serif;
   font-size: 16px;
   line-height: 1.55;
   color: var(--ink);
@@ -41,10 +41,7 @@ body {
   position: fixed;
   inset: 0;
   z-index: -1;
-  background:
-    radial-gradient(55rem 26rem at 110% -5%, rgba(47, 104, 114, 0.2) 0%, rgba(47, 104, 114, 0) 75%),
-    radial-gradient(40rem 22rem at -6% 105%, rgba(138, 58, 46, 0.16) 0%, rgba(138, 58, 46, 0) 78%),
-    linear-gradient(175deg, var(--bg) 0%, var(--bg-deep) 100%);
+  background: linear-gradient(180deg, var(--bg) 0%, var(--bg-deep) 100%);
 }
 
 .container {
@@ -59,7 +56,7 @@ body {
 
 .kicker {
   margin: 0 0 10px;
-  color: var(--accent-soft);
+  color: #5a5a5a;
   text-transform: uppercase;
   letter-spacing: 0.11em;
   font-size: 0.78rem;
@@ -69,15 +66,15 @@ body {
 h1,
 h2,
 h3 {
-  font-family: "Cormorant Garamond", Georgia, serif;
-  letter-spacing: 0.01em;
+  font-family: "Inter", "Segoe UI", sans-serif;
+  letter-spacing: 0;
 }
 
 h1 {
   margin: 0;
   font-size: clamp(2.4rem, 6vw, 4rem);
   line-height: 0.95;
-  color: #172125;
+  color: #111111;
 }
 
 .subtitle {
@@ -89,7 +86,7 @@ h1 {
 
 .card {
   border: 1px solid color-mix(in srgb, var(--line) 88%, #fff 12%);
-  background: linear-gradient(180deg, var(--card) 0%, var(--paper) 100%);
+  background: var(--card);
   border-radius: 22px;
   padding: 28px;
   box-shadow: var(--shadow-sm);
@@ -101,15 +98,7 @@ h1 {
 }
 
 .intro-card::before {
-  content: "";
-  position: absolute;
-  right: -48px;
-  top: -72px;
-  width: 220px;
-  height: 220px;
-  border-radius: 50%;
-  background: radial-gradient(circle at 40% 40%, rgba(31, 74, 82, 0.2) 0%, rgba(31, 74, 82, 0) 70%);
-  pointer-events: none;
+  content: none;
 }
 
 .intro-grid {
@@ -140,9 +129,9 @@ h1 {
 
 .intro-chip {
   border-radius: 999px;
-  border: 1px solid color-mix(in srgb, var(--accent-soft) 32%, #fff 68%);
-  background: color-mix(in srgb, var(--accent-soft) 9%, #fff 91%);
-  color: #244e55;
+  border: 1px solid #cfcfcf;
+  background: #f3f3f3;
+  color: #3b3b3b;
   padding: 6px 12px;
   font-size: 0.83rem;
   font-weight: 600;
@@ -151,14 +140,13 @@ h1 {
 .intro-facts {
   border: 1px solid color-mix(in srgb, var(--line) 92%, #fff 8%);
   border-radius: 16px;
-  background: rgba(255, 255, 255, 0.7);
-  backdrop-filter: blur(3px);
+  background: #fafafa;
   padding: 16px;
 }
 
 .intro-facts-title {
   margin: 0 0 11px;
-  font-family: "Manrope", sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 0.78rem;
   text-transform: uppercase;
   letter-spacing: 0.1em;
@@ -183,7 +171,7 @@ h1 {
   display: block;
   font-size: 1rem;
   line-height: 1.15;
-  color: #223034;
+  color: #1b1b1b;
 }
 
 .fact-box span {
@@ -245,9 +233,9 @@ h1 {
 }
 
 .tag {
-  background: color-mix(in srgb, var(--accent-soft) 8%, #fff 92%);
-  border: 1px solid color-mix(in srgb, var(--accent-soft) 30%, #fff 70%);
-  color: #264f56;
+  background: #f2f2f2;
+  border: 1px solid #cfcfcf;
+  color: #2f2f2f;
   border-radius: 999px;
   padding: 6px 12px;
   font-size: 0.85rem;
@@ -318,7 +306,7 @@ h3 {
 
 .btn-primary {
   background: linear-gradient(135deg, var(--accent) 0%, var(--accent-soft) 100%);
-  border-color: color-mix(in srgb, var(--accent-soft) 90%, #0a1214 10%);
+  border-color: #2f2f2f;
   color: var(--accent-contrast);
 }
 
@@ -327,9 +315,9 @@ h3 {
 }
 
 .answer-btn.is-selected {
-  border-color: color-mix(in srgb, var(--accent-soft) 68%, #fff 32%);
-  background: color-mix(in srgb, var(--accent-soft) 15%, #fff 85%);
-  color: #1f4a52;
+  border-color: #6a6a6a;
+  background: #ececec;
+  color: #1c1c1c;
 }
 
 .nav-row {
@@ -350,11 +338,9 @@ h3 {
 
 .winner-card {
   margin: 16px 0 14px;
-  border: 1px solid color-mix(in srgb, var(--accent-soft) 28%, #fff 72%);
+  border: 1px solid #cfcfcf;
   border-radius: 14px;
-  background:
-    radial-gradient(120% 170% at 95% -35%, rgba(47, 104, 114, 0.17) 0%, rgba(47, 104, 114, 0) 70%),
-    #fff;
+  background: #fff;
   padding: 15px;
 }
 
@@ -371,7 +357,7 @@ h3 {
   margin: 0;
   font-size: clamp(1.28rem, 2.5vw, 1.7rem);
   line-height: 1.1;
-  color: #1b3237;
+  color: #111111;
   font-weight: 700;
 }
 
@@ -443,7 +429,7 @@ h3 {
 .rank-fill {
   height: 100%;
   width: 0;
-  background: linear-gradient(90deg, #2f6872 0%, #75a2ac 100%);
+  background: linear-gradient(90deg, #1f1f1f 0%, #606060 100%);
 }
 
 .result-actions {
@@ -494,7 +480,7 @@ h3 {
   border-radius: 999px;
   border: 1px solid color-mix(in srgb, var(--line) 88%, #fff 12%);
   background: color-mix(in srgb, var(--paper) 70%, #fff 30%);
-  color: #445256;
+  color: #3f3f3f;
   padding: 4px 9px;
   font-size: 0.79rem;
 }
@@ -516,7 +502,7 @@ h3 {
   border: 1px solid color-mix(in srgb, var(--line) 84%, #fff 16%);
   border-radius: 10px;
   padding: 10px;
-  background: linear-gradient(180deg, #ffffff 0%, #f8f5ee 100%);
+  background: #fafafa;
 }
 
 .quote-head {
@@ -541,20 +527,20 @@ h3 {
 }
 
 .stance-ja {
-  color: #1f5f3b;
-  background: #e8f4ec;
-  border-color: #c5e6d1;
+  color: #1f1f1f;
+  background: #efefef;
+  border-color: #d3d3d3;
 }
 
 .stance-nein {
-  color: #7a2f24;
-  background: #f9e9e6;
-  border-color: #f2cac2;
+  color: #313131;
+  background: #ececec;
+  border-color: #d3d3d3;
 }
 
 .quote-text {
   margin: 0;
-  color: #435054;
+  color: #3f3f3f;
   font-size: 0.9rem;
   line-height: 1.52;
   font-style: italic;
