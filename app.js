@@ -367,26 +367,40 @@ function showResults() {
   ).length;
   const anyAnswered = state.answers.some((answer) => answer && answer !== "skip");
 
-  els.answeredCount.textContent = `${answeredCount}/${THESES.length}`;
-  els.weightedCount.textContent = `${weightedCount}`;
+  if (els.answeredCount) {
+    els.answeredCount.textContent = `${answeredCount}/${THESES.length}`;
+  }
+  if (els.weightedCount) {
+    els.weightedCount.textContent = `${weightedCount}`;
+  }
 
   if (!anyAnswered) {
-    els.winnerParty.textContent = "-";
-    els.winnerMeta.textContent =
-      "Beantworte mindestens eine These, um eine Auswertung zu erhalten.";
+    if (els.winnerParty) {
+      els.winnerParty.textContent = "-";
+    }
+    if (els.winnerMeta) {
+      els.winnerMeta.textContent =
+        "Beantworte mindestens eine These, um eine Auswertung zu erhalten.";
+    }
     els.ranking.innerHTML =
       "<p>Du hast keine These beantwortet. Starte neu und wähle mindestens eine These.</p>";
   } else {
     const top = ranking[0];
     const second = ranking[1];
-    els.winnerParty.textContent = `${top.party} (${top.percent}%)`;
+    if (els.winnerParty) {
+      els.winnerParty.textContent = `${top.party} (${top.percent}%)`;
+    }
     if (second) {
-      els.winnerMeta.textContent = `Vorsprung vor Platz 2: ${Math.max(
-        0,
-        top.percent - second.percent
-      )} Prozentpunkte`;
+      if (els.winnerMeta) {
+        els.winnerMeta.textContent = `Vorsprung vor Platz 2: ${Math.max(
+          0,
+          top.percent - second.percent
+        )} Prozentpunkte`;
+      }
     } else {
-      els.winnerMeta.textContent = "Nur eine Partei in der Auswertung verfügbar.";
+      if (els.winnerMeta) {
+        els.winnerMeta.textContent = "Nur eine Partei in der Auswertung verfügbar.";
+      }
     }
 
     els.ranking.innerHTML = ranking
